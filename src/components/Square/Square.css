@@ -1,4 +1,6 @@
 .square {
+    display: grid;
+    place-content: center;
     width: 62.5px;
     height: 62.5px;
 }
@@ -9,4 +11,14 @@
 
 .black-square{
     background-color: #779556;
+}
+
+.square .piece{
+    width: 62.5;
+    user-select: none;
+    cursor: grab;
+}
+
+.square .piece:active {
+    cursor: grabbing;
 }
