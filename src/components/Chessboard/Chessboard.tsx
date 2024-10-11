@@ -1,3 +1,4 @@
+import Square from '../Square/Square';
 import './Chessboard.css'
 
 const verticalAxis:string[] = ["1","2","3","4","5","6","7","8"];
@@ -8,8 +9,9 @@ const Chessboard = () => {
 
     for(let i = verticalAxis.length - 1; i >= 0; i--){
         for(let j = 0; j < horizontalAxis.length; j++){
+            const number = i + j;
             board.push(
-                <div className={(i + j) % 2 === 0 ? "black-square" : "white-square"}>[{horizontalAxis[j]}{verticalAxis[i]}]</div>
+                <Square number={number}/>
             )
         }
     }
